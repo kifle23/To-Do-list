@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: serif, monospace;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  width: 40%;
+  min-width: 500px;
+  min-height: 500px;
+  background-color: #fff;
+  box-shadow: 0 0 20px #666;
+  border-radius: 2px;
+  position: absolute;
+  top: 20vh;
+  left: 30vw;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+
+.heading {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.heading p {
+  font-size: 1.25rem;
+  color: #444;
+  text-shadow: -1px 0 5px #d1cece;
+}
+
+.add-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-item input {
+  border: none;
+  cursor: default;
+  font-size: 1.2rem;
+  font-style: italic;
+  flex: 1;
+}
+
+.task input {
+  font-family: sans-serif, monospace;
+  border: none;
+  cursor: default;
+  text-shadow: -1px 0 5px #d1cece;
+}
+
+/* list */
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  padding: 15px 10px;
+  font-size: 1.1rem;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.list-item .cross {
+  display: block;
+  background: url(./assets/verticle-menu.png) no-repeat center center/cover;
+  height: 21px;
+  width: 21px;
+  filter: invert(0.5);
+  cursor: move;
+}
+
+.reset-i {
+  display: block;
+  background: url(./assets/reset-icon.png) no-repeat center center/cover;
+  height: 21px;
+  width: 21px;
+  cursor: move;
+}
+
+.return-i {
+  display: block;
+  background: url(./assets/return-icon.png) no-repeat center center/cover;
+  height: 10px;
+  width: 10px;
+  filter: invert(0.5);
+  cursor: move;
+}
+
+.task {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-description {
+  flex: 1;
+}
+
+.completed .task-description {
+  text-decoration: line-through;
+  color: #666;
+}
+
+/* footer */
+
+.footer {
+  padding: 15px 10px;
+  text-align: center;
+  background-color: #f6f6f6;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #777;
+}
+
+.footer a:hover {
+  color: #444;
+}
