@@ -51,8 +51,8 @@ Open Terminal & Clone this repository to your desired folder:
 
 ```sh
 cd <path-to-the-folder>
-git clone https://github.com/kifle23/Awesome-Books-ES6.git
-cd Awesome-Books-ES6.git
+git clone https://github.com/kifle23/To-Do-list.git
+cd To-Do-list
 code .
 ```
 
@@ -79,7 +79,7 @@ No test are available
 
 ### :rocket: Live-Demo
 
-- [Live-Demo](https://kifle23.github.io/Awesome-Books-ES6/)
+- [Live-Demo](https://kifle23.github.io/To-Do-list/)
 
 ## :busts_in_silhouette: Authors
 
