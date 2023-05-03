@@ -71,23 +71,17 @@ To run the project open the index.html file in your web browser or you can also 
 
 ### Run tests
 
-No test are available
+```test
+npx eslint .
+npx hint .
 
-### Project-Presentation
-
-- We will add it later.
+```
 
 ### :rocket: Live-Demo
 
 - [Live-Demo](https://kifle23.github.io/To-Do-list/dist/)
 
 ## :busts_in_silhouette: Authors
-
-:bust_in_silhouette: **Kifle Haile**
-
-- GitHub: [@kifle23](https://github.com/kifle23)
-- Twitter: [@kifle12](https://twitter.com/KifleHaile12)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kifle-haile-5a613761)
 
 :bust_in_silhouette: **Kifle Haile**
 
