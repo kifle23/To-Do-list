@@ -1,24 +1,35 @@
-export default class List {
-  constructor(task, index) {
+class List {
+  constructor(task, index, complete) {
     this.task = task;
     this.index = index;
+    this.isCompleted = complete;
   }
 
-  static taskList = [
-    {
-      description: 'Clean the house',
-      completed: false,
-      index: 0,
-    },
-    {
-      description: 'Buy groceries',
-      completed: true,
-      index: 1,
-    },
-    {
-      description: 'Do laundry',
-      completed: false,
-      index: 2,
-    },
-  ];
+  static taskList = [];
+
+  toggleCompleted() {
+    this.isCompleted = !this.isCompleted;
+  }
+
+  updateTask(text) {
+    this.task = text;
+  }
+
+  static reindex() {
+    List.taskList.forEach((task, i) => {
+      task.index = i + 1;
+    });
+  }
+
+  static deleteTask(i) {
+    List.taskList = List.taskList.filter((each) => each.index !== i);
+    List.reindex();
+  }
+
+  static deleteCompleted() {
+    List.taskList = List.taskList.filter((each) => !each.isCompleted);
+    List.reindex();
+  }
 }
+
+export default List;

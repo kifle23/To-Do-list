@@ -1,33 +1,35 @@
-import tasks from './list.js';
+import Tasks from './list.js';
+import add from './crud.js';
+import storage from './saveTasksToLocalStorage.js';
 
-function renderTasks() {
-  const sortedTasks = tasks.taskList.sort((a, b) => a.index - b.index);
-  sortedTasks.forEach((t) => {
-    const listWrapper = document.querySelector('.to-do-list');
-    const taskWrapper = document.createElement('div');
-    taskWrapper.classList.add('list-item');
-    const task = document.createElement('div');
-    task.classList.add('task');
+const addInput = document.querySelector('.add-item input');
+const returnBtn = document.querySelector('.return-i');
+const createTaskInput = document.querySelector('#create-task');
 
-    const checkbox = document.createElement('input');
-    checkbox.setAttribute('type', 'checkbox');
-    if (t.completed) {
-      checkbox.setAttribute('checked', '');
-      taskWrapper.classList.toggle('completed');
-    }
-    const description = document.createElement('input');
-    description.setAttribute('type', 'text');
-    description.classList.add('task-description');
-    description.value = t.description;
-
-    const crossBtn = document.createElement('i');
-    crossBtn.classList.add('cross');
-    task.appendChild(checkbox);
-    task.appendChild(description);
-    task.appendChild(crossBtn);
-    taskWrapper.appendChild(task);
-    listWrapper.appendChild(taskWrapper);
+if (localStorage.tasks) {
+  const storedTasks = JSON.parse(localStorage.tasks);
+  storedTasks.forEach((item) => {
+    Tasks.taskList.push(new Tasks(item.task, item.index, item.isCompleted));
+    add(item.task, item.index, item.isCompleted);
   });
 }
 
-renderTasks();
+const updateTaskArray = (task) => {
+  Tasks.taskList.push(new Tasks(task, Tasks.taskList.length + 1, false));
+};
+
+returnBtn.addEventListener('click', () => {
+  add(addInput.value, Tasks.taskList.length + 1, false);
+  updateTaskArray(addInput.value);
+  storage();
+  addInput.value = '';
+});
+
+createTaskInput.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    add(addInput.value, Tasks.taskList.length + 1, false);
+    updateTaskArray(addInput.value);
+    storage();
+    addInput.value = '';
+  }
+});

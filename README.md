@@ -21,7 +21,7 @@
 
 # :book: [To Do list]
 
-**[To Do list]** is a microverse project where we build a basic website that allows users to add/remove to do lists. We achieved that by using JavaScript objects and arrays. We also dynamically modified the DOM and add basic events.
+**[To Do list]** is an app used to create, manage, and complete tasks. It typically provides an interface for users to add, delete, and organize tasks as needed.
 
 ## :hammer_and_wrench: Built With
 
@@ -32,9 +32,9 @@ HTML, CSS and Javascript
 
 ### Key Features
 
-- **[- Use Javascript, HTML & CSS linters]**
-- **[- Build a basic website that allows users to add/remove books from a list.]**
-- **[- Used JavaScript objects and arrays.]**
+- **[- Data stored to local storage]**
+- **[- Follow JavaScript best practices.]**
+- **[- Set up using webpack.]**
 - **[- Dynamically modified the DOM and add basic events.]**
 
 ## :computer: Getting Started
@@ -79,7 +79,7 @@ No test are available
 
 ### :rocket: Live-Demo
 
-- [Live-Demo](https://kifle23.github.io/To-Do-list/)
+- [Live-Demo](https://kifle23.github.io/To-Do-list/dist/)
 
 ## :busts_in_silhouette: Authors
 
@@ -97,9 +97,7 @@ No test are available
 
 ## :telescope: Future Features
 
-- [ ] **[Add more forms]**
-- [ ] **[Make an atractive Layout]**
-- [ ] **[Add some Javascript]**
+- [ ] **[Add a drag and drop]**
 
 ## :handshake: Contributing
 

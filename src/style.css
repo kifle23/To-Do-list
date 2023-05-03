@@ -93,12 +93,28 @@ input {
   cursor: move;
 }
 
+.field-focus {
+  background-color: #f5ffe9;
+}
+
+.list-item .del-btn {
+  background: url(./assets/delete.png) no-repeat center center/cover;
+  height: 21px;
+  width: 21px;
+  filter: invert(0.5);
+  cursor: pointer;
+}
+
+.del-btn:hover {
+  filter: invert(0.3);
+}
+
 .reset-i {
   display: block;
   background: url(./assets/reset-icon.png) no-repeat center center/cover;
   height: 21px;
   width: 21px;
-  cursor: move;
+  cursor: pointer;
 }
 
 .return-i {
