@@ -1,5 +1,6 @@
 import tasks from './list.js';
 import storage from './saveTasksToLocalStorage.js';
+import dragDrop from './dragDrop.js';
 
 export default function addTask(taskItem, index, complete) {
   if (!taskItem) return;
@@ -9,6 +10,7 @@ export default function addTask(taskItem, index, complete) {
   const taskWrapper = document.createElement('div');
   taskWrapper.classList.add('list-item');
   taskWrapper.setAttribute('id', index);
+  taskWrapper.setAttribute('draggable', true);
 
   const task = document.createElement('div');
   task.classList.add('task');
@@ -56,7 +58,18 @@ export default function addTask(taskItem, index, complete) {
     delBtn.style.display = 'none';
     dragBtn.style.display = 'block';
   });
+  dragBtn.addEventListener('click', () => {
+    dragDrop();
+  });
+  const toggleCompleted = (e) => {
+    const checkParent = e.target.parentElement.parentElement;
+    const index = +checkParent.getAttribute('id') - 1;
+    tasks.taskList[index].toggleCompleted();
+    checkParent.classList.toggle('completed');
+    storage();
+  };
 
+  checkbox.addEventListener('change', toggleCompleted);
   btnWrapper.appendChild(delBtn);
   task.appendChild(checkbox);
   task.appendChild(description);

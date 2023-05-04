@@ -5,6 +5,7 @@ import storage from './saveTasksToLocalStorage.js';
 const addInput = document.querySelector('.add-item input');
 const returnBtn = document.querySelector('.return-i');
 const createTaskInput = document.querySelector('#create-task');
+const clearAll = document.getElementById('clearCompleted');
 
 if (localStorage.tasks) {
   const storedTasks = JSON.parse(localStorage.tasks);
@@ -32,4 +33,19 @@ createTaskInput.addEventListener('keypress', (e) => {
     storage();
     addInput.value = '';
   }
+});
+clearAll.addEventListener('click', (e) => {
+  e.preventDefault();
+  const allTasks = document.querySelectorAll('.list-item');
+  allTasks.forEach((item) => {
+    if (item.classList.value.includes('completed')) {
+      item.remove();
+      Tasks.deleteCompleted();
+    }
+  });
+  storage();
+  const listItems = document.querySelectorAll('.list-item');
+  listItems.forEach((listItem, index) => {
+    listItem.setAttribute('id', index + 1);
+  });
 });
