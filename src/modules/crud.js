@@ -5,7 +5,6 @@ import dragDrop from './dragDrop.js';
 export default function addTask(taskItem, index, complete) {
   if (!taskItem) return;
 
-  const refreshBtn = document.querySelector('.reset-i');
   const listWrapper = document.querySelector('.to-do-list');
   const taskWrapper = document.createElement('div');
   taskWrapper.classList.add('list-item');
@@ -53,10 +52,6 @@ export default function addTask(taskItem, index, complete) {
       listItems[i].setAttribute('id', i + 1);
     }
     storage();
-  });
-  refreshBtn.addEventListener('click', () => {
-    delBtn.style.display = 'none';
-    dragBtn.style.display = 'block';
   });
   dragBtn.addEventListener('click', () => {
     dragDrop();
