@@ -1,23 +1,23 @@
 # :green_book: Table of Contents
 
-- [:book: About the Project](#about-project)
-  - [:hammer_and_wrench: Built With](#built-with)
+- [:green_book: Table of Contents](#green_book-table-of-contents)
+- [:book: [To Do list]](#book-to-do-list)
+  - [:hammer_and_wrench: Built With](#hammer_and_wrench-built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-- [:computer: Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Project-Presentation](#project-presentation)
-  - [Live-Demo](#live-demo)
-- [:busts_in_silhouette: Authors](#authors)
-- [:telescope: Future Features](#future-features)
-- [:handshake: Contributing](#contributing)
-- [:star:️ Show your support](#support)
-- [:pray: Acknowledgements](#acknowledgements)
-- [📝 License](#license)
+  - [:computer: Getting Started](#computer-getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [:rocket: Live-Demo](#rocket-live-demo)
+  - [:busts_in_silhouette: Authors](#busts_in_silhouette-authors)
+  - [:telescope: Future Features](#telescope-future-features)
+  - [:handshake: Contributing](#handshake-contributing)
+  - [:star:️ Show your support](#star️-show-your-support)
+  - [:pray: Acknowledgments](#pray-acknowledgments)
+  - [📝 License <a name="license"></a>](#-license-)
 
 # :book: [To Do list]
 
@@ -36,6 +36,7 @@ HTML, CSS and Javascript
 - **[- Follow JavaScript best practices.]**
 - **[- Set up using webpack.]**
 - **[- Dynamically modified the DOM and add basic events.]**
+- **[- Test Add and Delete item.]**
 
 ## :computer: Getting Started
 
@@ -74,7 +75,7 @@ To run the project open the index.html file in your web browser or you can also 
 ```test
 npx eslint .
 npx hint .
-
+npm run test
 ```
 
 ### :rocket: Live-Demo
@@ -88,6 +89,11 @@ npx hint .
 - GitHub: [@kifle23](https://github.com/kifle23)
 - Twitter: [@kifle12](https://twitter.com/KifleHaile12)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kifle-haile-5a613761)
+
+:bust_in_silhouette: **Wael Elsafty**
+
+- GitHub: [@waelelsafty07](https://github.com/waelelsafty07)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/waelelsafty07)
 
 ## :telescope: Future Features
 

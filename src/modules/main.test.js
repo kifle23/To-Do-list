@@ -11,8 +11,9 @@ describe('Add/Delete items from to-do list', () => {
       `;
       add('Test', 1, false);
       add('Second Test', 2, false);
+      add('third Test', 3, false);
       const list = document.querySelectorAll('.list-item');
-      expect(list).toHaveLength(2);
+      expect(list).toHaveLength(3);
     });
     test('Delete item from the list', () => {
       document.body.innerHTML = `
@@ -23,9 +24,10 @@ describe('Add/Delete items from to-do list', () => {
       `;
       add('Test', 1, false);
       add('Second Test', 2, false);
+      add('third Test', 3, false);
       document.querySelector('.del-btn').click();
       const list = document.querySelectorAll('.list-item');
-      expect(list).toHaveLength(1);
+      expect(list).toHaveLength(2);
     });
   });
 });
