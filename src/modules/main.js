@@ -27,7 +27,7 @@ returnBtn.addEventListener('click', () => {
 });
 
 createTaskInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && addInput.value !== '') {
     add(addInput.value, Tasks.taskList.length + 1, false);
     updateTaskArray(addInput.value);
     storage();
