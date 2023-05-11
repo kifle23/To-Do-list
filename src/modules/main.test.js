@@ -1,4 +1,5 @@
 const add = require('./crud.js').default;
+const List = require('./list.js').default;
 
 describe('Add/Delete items from to-do list', () => {
   describe('Add/Delete Tasks', () => {
@@ -50,6 +51,16 @@ describe('Add/Delete items from to-do list', () => {
       });
       const Newlist = document.querySelectorAll('.list-item');
       expect(Newlist).toHaveLength(1);
+    });
+    test('Changing completed status', () => {
+      List.taskList.push(new List('Do laundry', 1, false));
+      List.taskList[0].toggleCompleted();
+      expect(List.taskList[0].isCompleted).toBe(true);
+    });
+    test('Update task description', () => {
+      List.taskList.push(new List('Go shopping', 1, false));
+      List.taskList[0].updateTask('Do laundry');
+      expect(List.taskList[0].task).toBe('Do laundry');
     });
   });
 });
