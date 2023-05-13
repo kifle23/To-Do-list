@@ -7,6 +7,7 @@ describe('Add/Delete items from to-do list', () => {
       document.body.innerHTML = `
       <div class="to-do-list"></div>
       <i class="return-i">
+      <i class="reset-i">
       <input id="create-task" type="text">
       <a href="#" id="clearCompleted"></a>
       `;
@@ -20,6 +21,7 @@ describe('Add/Delete items from to-do list', () => {
       document.body.innerHTML = `
       <div class="to-do-list"></div>
       <i class="return-i">
+      <i class="reset-i">
       <input id="create-task" type="text">
       <a href="#" id="clearCompleted"></a>
       `;
@@ -35,7 +37,8 @@ describe('Add/Delete items from to-do list', () => {
     test('Testing clear completed', () => {
       document.body.innerHTML = `
       <div class="to-do-list"></div>
-      <i class="return-button">
+      <i class="return-i">
+      <i class="reset-i">
       <input id="create-task" type="text">
       <a href="#" id="clearCompleted"></a>
       `;
